@@ -8,7 +8,6 @@
     "dev": "ts-node ./src/index.ts",
     "build": "tsc",
     "start": "node ./dist/index.js"
-
   },
   "repository": {
     "type": "git",
@@ -19,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/LeomarLinhares/desafio-coleta-api/issues"
   },
-  "homepage": "https://github.com/LeomarLinhares/desafio-coleta-api#readme"
+  "homepage": "https://github.com/LeomarLinhares/desafio-coleta-api#readme",
+  "dependencies": {
+    "@types/node": "^17.0.30",
+    "typescript": "^4.6.4"
+  }
 }
