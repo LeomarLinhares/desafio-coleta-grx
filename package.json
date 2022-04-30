@@ -2,9 +2,13 @@
   "name": "desafio-coleta-api",
   "version": "1.0.0",
   "description": "Uma API que coleta dados de respostas de formulários, os processa e salva o resultado final de forma a ser aproveitado.",
-  "main": "index.js",
+  "main": "./src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node ./src/index.ts",
+    "build": "tsc",
+    "start": "node ./dist/index.js"
+
   },
   "repository": {
     "type": "git",
