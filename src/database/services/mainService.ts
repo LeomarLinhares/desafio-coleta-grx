@@ -6,3 +6,5 @@ class MainService {
     return response;
   }
 }
+
+export default new MainService();
