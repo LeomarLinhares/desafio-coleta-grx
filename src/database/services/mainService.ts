@@ -40,6 +40,26 @@ class MainService {
       };
     }
   }
+
+  public async getAll(): Promise<IMessage> {
+    try {
+      const allAnswersBuffer: Buffer = await MainModel.read();
+      const allAnswers: IAnswerResponse[] = JSON.parse(
+        allAnswersBuffer.toString()
+      );
+
+      return {
+        statusCode: StatusCode.OK,
+        message: allAnswers,
+      };
+    } catch (error) {
+      console.warn(error);
+      return {
+        statusCode: StatusCode.INTERNAL_SERVER_ERROR,
+        message: "Erro ao acessar arquivo de dados",
+      };
+    }
+  }
 }
 
 export default new MainService();
