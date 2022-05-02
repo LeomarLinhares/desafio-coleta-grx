@@ -20,8 +20,8 @@ class MainService {
         JSON.stringify([
           ...allAnswers,
           {
-            ...answerWithCount,
             id: allAnswers.length + 1,
+            ...answerWithCount,
           },
         ])
       );
