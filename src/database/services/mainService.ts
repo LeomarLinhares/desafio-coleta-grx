@@ -2,6 +2,7 @@ import countHandler from '../../helpers/countHandler';
 import { IAnswer, IAnswerResponse, IAnswerWithCount } from '../../interfaces/IAnswer';
 import IMessage from '../../interfaces/IMessage';
 import MainModel from '../models/mainModel';
+import StatusCode from '../messages/statusCode';
 
 class MainService {
   public async create (answer: IAnswer): Promise<IAnswerResponse | IMessage> {
@@ -13,14 +14,17 @@ class MainService {
         ...answerWithCount,
         id: allAnswers.length + 1,
       }]));
-      
+
       const response = JSON.parse(responseBuffer.toString());
 
       return response[response.length - 1];
 
     } catch (error) {
       console.warn(error);
-      return { message: 'Erro ao acessar arquivo de dados' }
+      return {
+        statusCode: StatusCode.INTERNAL_SERVER_ERROR,
+        message: 'Erro ao acessar arquivo de dados'
+      }
     }
   }
 }
