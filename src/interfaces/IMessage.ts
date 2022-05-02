@@ -1,4 +1,4 @@
 export default interface IMessage {
   statusCode: number;
-  message: string;
+  message: string | object;
 }
