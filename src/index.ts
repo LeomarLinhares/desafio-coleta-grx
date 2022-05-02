@@ -1,4 +1,5 @@
 import express from 'express';
+import mainRoute from './routes/main';
 
 class App {
   public app: express.Express;
@@ -10,6 +11,7 @@ class App {
 
   private config(): void {
     this.app.use(express.json());
+    this.app.use(mainRoute);
   }
 
   public start(): void {
