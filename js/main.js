@@ -6,6 +6,7 @@ function sendAnswers(answers) {
   const url = new URL('http://localhost:5000');
   fetch(url, {
     method: 'POST',
+    headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(answers),
   })
     .then(res => res.json())
