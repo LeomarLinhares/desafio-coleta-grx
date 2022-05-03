@@ -15,11 +15,12 @@ function sendAnswers(answers) {
 }
 
 areaText.addEventListener('input', () => {
+  const minChar = 15;
   const maxChar = 200;
-  if (areaText.value.length > maxChar || areaText.value.length < 15) {
+  if (areaText.value.length > maxChar || areaText.value.length < minChar) {
     charCounter.classList.remove('bg-primary');
     charCounter.classList.add('bg-danger');
-  } else if (areaText.value.length < maxChar) {
+  } else if (areaText.value.length <= maxChar) {
     charCounter.classList.remove('bg-danger');
     charCounter.classList.add('bg-primary');
   }
