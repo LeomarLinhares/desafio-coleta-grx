@@ -18,14 +18,14 @@
     </nav>
   </header>
 
-  <main class="container card mt-4">
-    <form class="card-body" action="." method="post">
+  <main class="container card mt-4 w-50">
+    <form class="card-body d-flex flex-column" action="." method="post">
 
       <div class="mb-3">
         <div class="mb-2">
           <label for="question_1">Você se considera bom em lógica?</label>
         </div>
-        <div class="btn-group" role="group" aria-label="Você se considera bom em lógica?">
+        <div class="btn-group w-100" role="group" aria-label="Você se considera bom em lógica?">
           <input type="radio" class="btn-check" name="question_1" id="q1-sim" value="Sim" autocomplete="off" checked>
           <label class="btn btn-outline-primary" for="q1-sim">Sim</label>
         
@@ -38,7 +38,7 @@
         <div class="mb-2">
           <label for="question_2">Gosta de aprender com desafios?</label>
         </div>
-        <div class="btn-group" role="group" aria-label="Gosta de aprender com desafios?">
+        <div class="btn-group w-100" role="group" aria-label="Gosta de aprender com desafios?">
           <input type="radio" class="btn-check" name="question_2" id="q2-sim" value="Sim" autocomplete="off" checked>
           <label class="btn btn-outline-primary" for="q2-sim">Sim</label>
         
@@ -58,11 +58,11 @@
         </select>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-3 d-flex flex-column">
         <div class="input-group">
           <textarea class="form-control" placeholder="Justifique a resposta anterior" id="floatingTextarea"></textarea>
         </div>
-        <span class="badge bg-primary">0/200</span>
+        <span class="badge bg-primary align-self-end mt-1" id="charCounter">0/200</span>
       </div>
 
     </form>
