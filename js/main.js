@@ -2,6 +2,17 @@ const areaText = document.getElementById('floatingTextarea');
 const charCounter = document.getElementById('charCounter');
 const sendButton = document.getElementById('sendButton');
 
+function sendAnswers(answers) {
+  const url = new URL('http://localhost:5000');
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(answers),
+  })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+}
+
 areaText.addEventListener('input', () => {
   const maxChar = 200;
   if (areaText.value.length > maxChar || areaText.value.length < 15) {
