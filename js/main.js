@@ -20,9 +20,11 @@ areaText.addEventListener('input', () => {
   if (areaText.value.length > maxChar || areaText.value.length < minChar) {
     charCounter.classList.remove('bg-primary');
     charCounter.classList.add('bg-danger');
+    sendButton.disabled = true;
   } else if (areaText.value.length <= maxChar) {
     charCounter.classList.remove('bg-danger');
     charCounter.classList.add('bg-primary');
+    sendButton.disabled = false;
   }
   charCounter.innerHTML = `${areaText.value.length} / ${maxChar}`;
 })
