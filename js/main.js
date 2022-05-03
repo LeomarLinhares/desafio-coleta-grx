@@ -15,10 +15,9 @@ areaText.addEventListener('input', () => {
 })
 
 sendButton.addEventListener('click', () => {
-  const question3Input = document.getElementById('question_3');
   const question_1 = document.querySelector('input[name="question_1"]:checked').value;
   const question_2 = document.querySelector('input[name="question_2"]:checked').value;
-  const question_3 = question3Input.value;
+  const question_3 = document.getElementById('question_3').value;
   const question_4 = areaText.value;
   sendAnswers({ question_1, question_2, question_3, question_4 });
 })
