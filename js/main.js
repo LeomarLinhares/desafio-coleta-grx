@@ -32,5 +32,8 @@ sendButton.addEventListener('click', () => {
   const question_2 = document.querySelector('input[name="question_2"]:checked').value;
   const question_3 = document.getElementById('question_3').value;
   const question_4 = areaText.value;
+  if (question_4.length < 15 || question_4.length > 200) {
+    return;
+  }
   sendAnswers({ question_1, question_2, question_3, question_4 });
 })
