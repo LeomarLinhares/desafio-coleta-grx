@@ -12,6 +12,9 @@ export default (quantity, percentage, type) => {
   // Gera o container de quantidade
   const quantityColumn = document.createElement('div');
   quantityColumn.classList.add('col');
+  quantityColumn.classList.add('d-flex');
+  quantityColumn.classList.add('flex-column');
+  quantityColumn.classList.add('justify-content-end');
 
   const h4TitleQuantity = document.createElement('h4');
   h4TitleQuantity.classList.add('text-center');
@@ -28,6 +31,9 @@ export default (quantity, percentage, type) => {
   // Gera o container da porcentagem
   const percentageColumn = document.createElement('div');
   percentageColumn.classList.add('col');
+  percentageColumn.classList.add('d-flex');
+  percentageColumn.classList.add('flex-column');
+  percentageColumn.classList.add('justify-content-end');
 
   const h4TitlePercentage = document.createElement('h4');
   h4TitlePercentage.classList.add('text-center');
