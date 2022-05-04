@@ -38,4 +38,5 @@ sendButton.addEventListener('click', () => {
     return;
   }
   sendAnswers({ question_1, question_2, question_3, question_4 });
+  window.location.href = './results.html';
 })
