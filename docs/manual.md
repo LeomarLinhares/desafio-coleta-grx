@@ -58,6 +58,7 @@ Rotas utilizadas pela aplicação web para executar metodos de **POST**, **GET**
 | Nome | Funcionalidade|
 |------|--------------|
 |```POST``` /api|Adiciona uma nova resposta de formulário ao enviar um body no seguinte [formato](#post-api)|
+|```GET``` /api|Retorna uma lista com todas as respostas presentes no arquivo no seguinte [formato](#get-api)|
 
 ---
 
@@ -87,4 +88,36 @@ Rotas utilizadas pela aplicação web para executar metodos de **POST**, **GET**
 		"neutralQuantity": 0
 	}
 }
+```
+
+#### GET ```/api```
+
+```json
+// retorna
+[
+	{
+		"id": 1,
+		"question_1": "Sim",
+		"question_2": "Sim",
+		"question_3": "Agora!!",
+		"question_4": "Porque a empresa oferece um excelente ambiente de trabalho inclusivo, diverso e horizontal.",
+		"count": {
+			"negativeQuantity": 0,
+			"positiveQuantity": 4,
+			"neutralQuantity": 0
+		}
+	},
+	{
+		"id": 2,
+		"question_1": "Sim",
+		"question_2": "Sim",
+		"question_3": "Sim",
+		"question_4": "Gostei muito dos benefícios oferecidos e pela preocupação com seus funcionários.",
+		"count": {
+			"negativeQuantity": 0,
+			"positiveQuantity": 4,
+			"neutralQuantity": 0
+		}
+	}
+]
 ```
