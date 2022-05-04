@@ -17,6 +17,8 @@ export default (array) => {
       .find(partial => partial.type === 'neutralQuantity')
       .quantity += curr.count.neutralQuantity;
 
+    acc.partials.sort((a, b) => b.quantity - a.quantity);
+
     return acc;
   };
 
