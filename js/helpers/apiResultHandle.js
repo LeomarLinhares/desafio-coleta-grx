@@ -5,6 +5,18 @@ export default (array) => {
     acc.total += curr.count.negativeQuantity;
     acc.total += curr.count.neutralQuantity;
 
+    acc.partials
+      .find(partial => partial.type === 'positiveQuantity')
+      .quantity += curr.count.positiveQuantity;
+
+    acc.partials
+      .find(partial => partial.type === 'negativeQuantity')
+      .quantity += curr.count.negativeQuantity;
+
+    acc.partials
+      .find(partial => partial.type === 'neutralQuantity')
+      .quantity += curr.count.neutralQuantity;
+
     return acc;
   };
 
