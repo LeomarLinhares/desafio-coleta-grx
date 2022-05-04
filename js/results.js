@@ -19,7 +19,7 @@ async function renderResults() {
   calculatedResults.partials.forEach(partial => {
     const partialResults = partialResultsContainer(
       partial.quantity,
-      (partial.quantity / calculatedResults.total) * 100,
+      ((partial.quantity / calculatedResults.total) * 100).toFixed(1),
       partial.type,
     );
     resultsContainer.appendChild(partialResults);
