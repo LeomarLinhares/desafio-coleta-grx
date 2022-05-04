@@ -39,7 +39,7 @@ export default (quantity, percentage, type) => {
   divPercentageContainer.classList.add('m-2');
   divPercentageContainer.classList.add('p-3');
   divPercentageContainer.classList.add('rounded');
-  divPercentageContainer.innerText = percentage;
+  divPercentageContainer.innerText = `${percentage}%`;
 
   // Une os containers
   partialResults.appendChild(quantityColumn);
