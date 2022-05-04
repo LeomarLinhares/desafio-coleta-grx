@@ -3,7 +3,7 @@ const charCounter = document.getElementById('charCounter');
 const sendButton = document.getElementById('sendButton');
 
 function sendAnswers(answers) {
-  const url = new URL('http://localhost:5000');
+  const url = new URL('http://localhost:5000/api');
   fetch(url, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},

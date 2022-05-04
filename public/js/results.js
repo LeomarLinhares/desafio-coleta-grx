@@ -11,7 +11,7 @@ async function getResults(url) {
 }
 
 async function renderResults() {
-  const results = await getResults('http://localhost:5000');
+  const results = await getResults('http://localhost:5000/api');
   const calculatedResults = apiResultHandle(results);
 
   totalResult.innerText = calculatedResults.total;
