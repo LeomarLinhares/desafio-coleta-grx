@@ -21,7 +21,8 @@ export default (quantity, percentage, type) => {
   h4TitleQuantity.innerText = `Quantidade ${label}`;
 
   const divQuantityContainer = document.createElement('div');
-  divQuantityContainer.classList.add('bg-primary');
+  divQuantityContainer.classList.add('border');
+  divQuantityContainer.classList.add('border-primary');
   divQuantityContainer.classList.add('text-center');
   divQuantityContainer.classList.add('m-2');
   divQuantityContainer.classList.add('p-3');
@@ -40,7 +41,8 @@ export default (quantity, percentage, type) => {
   h4TitlePercentage.innerText = `% ${label}`;
 
   const divPercentageContainer = document.createElement('div');
-  divPercentageContainer.classList.add('bg-primary');
+  divPercentageContainer.classList.add('border');
+  divPercentageContainer.classList.add('border-primary');
   divPercentageContainer.classList.add('text-center');
   divPercentageContainer.classList.add('m-2');
   divPercentageContainer.classList.add('p-3');
