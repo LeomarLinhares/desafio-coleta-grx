@@ -8,11 +8,13 @@
 
 ## Etapa mais desafiadora
 
-A parte mais desafiadora de fazer esse projeto foi criar a renderização dos elementos dinâmicos na mão da etapa bônus de renderizar as respostas com a porcentagem.
+A parte mais desafiadora de fazer esse projeto foi criar a renderização dos elementos dinâmicos da etapa bônus na mão e renderizar as respostas com a porcentagem.
 
 Eu havia decidido não utilizar o React por pensar que era muita engenharia para uma solução simples, mas eu queria manter ainda a lógica de criação de um componente separado. Passei um tempo planejando como eu ia fazer essa separação e na hora de por em prática eu percebi que estava enferrujado em manipulação de elementos da DOM via Javascript.
 
 O lado bom é que relembrei bastante coisa.
+
+Para mais detalhes sobre o desenvolvimento eu criei um **[logbook](./docs/logbook.md)**.
 
 ## Feedback sobre o teste
 
