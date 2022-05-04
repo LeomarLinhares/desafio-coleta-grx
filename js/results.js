@@ -1,7 +1,8 @@
 import partialResultsContainer from './components/partialResultsContainer.js';
+import apiResultHandle from './helpers/apiResultHandle.js';
 
 const resultsContainer = document.getElementById('resultsContainer');
-const totalResultsContainer = document.getElementById('totalResultsContainer');
+const totalResult = document.getElementById('totalResult');
 
 async function getResults(url) {
   const response = await fetch(url);
@@ -11,6 +12,18 @@ async function getResults(url) {
 
 async function renderResults() {
   const results = await getResults('http://localhost:5000');
+  const calculatedResults = apiResultHandle(results);
+
+  totalResult.innerText = calculatedResults.total;
+
+  calculatedResults.partials.forEach(partial => {
+    const partialResults = partialResultsContainer(
+      partial.quantity,
+      (partial.quantity / calculatedResults.total) * 100,
+      partial.type,
+    );
+    resultsContainer.appendChild(partialResults);
+  });
 }
 
 renderResults();
